@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
@@ -38,9 +39,13 @@ public class MainActivityFragment extends Fragment {
     private void initViews(View view) {
         textView = (TextView) view.findViewById(R.id.barscan);
         webView = (WebView) view.findViewById(R.id.webview);
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webView.setVisibility(View.INVISIBLE);
     }
 
     public void showWebView(String url) {
+        webView.setVisibility(View.VISIBLE);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(url);
     }

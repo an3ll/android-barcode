@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Barcode</string>
     <string name="action_settings">Settings</string>
-    <string name="barscan">Resultat</string>
+    <string name="barscan">Scanna en barcode för att komma till kampanjen! </string>
 </resources>

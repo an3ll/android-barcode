@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (scanResult != null) {
 
-            mainActivityFragment.setText(scanResult.getContents());
+//            mainActivityFragment.setText(scanResult.getContents());
             mainActivityFragment.showWebView(scanResult.getContents());
 
 
